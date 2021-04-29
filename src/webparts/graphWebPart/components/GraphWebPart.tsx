@@ -5,14 +5,14 @@ import { escape } from '@microsoft/sp-lodash-subset';
 import { MSGraphClient } from '@microsoft/sp-http'
 import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
 
-export const GraphWebPart: React.FC<IGraphWebPartProps> = ({ context }) => {
+export const GraphWebPart: React.FC<IGraphWebPartProps> = ({ context, contextGraphApi }) => {
 
   const [infoUser, setInfoUser] = React.useState<any>();
   const [infoGroup, setInfoGroup] = React.useState<any>();
   const [infoPlanner, setInfoPlanner] = React.useState<any>();
 
   function getValueUser() {
-    context.getClient()
+    contextGraphApi.getClient()
       .then((client: MSGraphClient): void => {
         client
           .api('/me')
@@ -25,7 +25,7 @@ export const GraphWebPart: React.FC<IGraphWebPartProps> = ({ context }) => {
   };
 
   function getValueGroups() {
-    context.getClient()
+    contextGraphApi.getClient()
       .then((client: MSGraphClient): void => {
         client
           .api('/groups')
@@ -37,12 +37,12 @@ export const GraphWebPart: React.FC<IGraphWebPartProps> = ({ context }) => {
   };
 
   function getValuePlanner() {
-    context.getClient()
+    contextGraphApi.getClient()
       .then((client: MSGraphClient): void => {
         client
           .api('/me/planner/tasks')
           .get((error, _infoPlanner: any, rawResponse?: any) => {
-            console.log(_infoPlanner)
+            console.log(_infoPlanner.value)
             setInfoPlanner(_infoPlanner.value)
           });
       });
@@ -52,6 +52,7 @@ export const GraphWebPart: React.FC<IGraphWebPartProps> = ({ context }) => {
     getValueUser();
     getValueGroups();
     getValuePlanner();
+    console.log(context.pageContext)
   }, [])
 
   return (
@@ -73,7 +74,7 @@ export const GraphWebPart: React.FC<IGraphWebPartProps> = ({ context }) => {
                 <h1>Planner Task:</h1>
                 {infoPlanner.length ?
                   <>
-                    {infoPlanner.map((el: any) => <h1>{el}</h1>)}
+                    {infoPlanner.map((el: any) => <h1>{el.title}</h1>)}
                   </> : <h1>Tasks clear</h1>
                 }
               </> : <h1>loading</h1>

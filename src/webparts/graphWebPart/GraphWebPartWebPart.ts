@@ -13,6 +13,7 @@ import { IGraphWebPartProps } from './components/IGraphWebPartProps';
 
 export interface IGraphWebPartWebPartProps {
   description: string;
+  contextGraphApi: any;
   context: any;
 }
 
@@ -22,8 +23,9 @@ export default class GraphWebPartWebPart extends BaseClientSideWebPart<IGraphWeb
     const element: React.ReactElement<IGraphWebPartProps> = React.createElement(
       GraphWebPart,
       {
-        description: this.properties.description,
-        context: this.context.msGraphClientFactory
+        description: this.properties.description, 
+        contextGraphApi: this.context.msGraphClientFactory,
+        context: this.context
       }
     );
 
