@@ -1,19 +1,27 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "spfx-api-scopes-tutorial-client-side-solution",
-    "id": "841cd609-d821-468d-a6e4-2d207b966cd8",
+    "name": "graph-apis-client-side-solution",
+    "id": "0bf1fb94-d6af-487d-b5d3-d57e99f2b8e8",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
     "webApiPermissionRequests": [
       {
         "resource": "Microsoft Graph",
-        "scope": "User.ReadBasic.All"
+        "scope": "Mail.Read"
       }
-    ]
+    ],
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    }
   },
   "paths": {
-    "zippedPackage": "solution/spfx-api-scopes-tutorial.sppkg"
+    "zippedPackage": "solution/graph-apis.sppkg"
   }
 }

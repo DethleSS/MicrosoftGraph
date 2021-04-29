@@ -1,5 +1,5 @@
 {
-  "name": "spfx-api-scopes",
+  "name": "graph-apis",
   "version": "0.0.1",
   "private": true,
   "main": "lib/index.js",
@@ -12,6 +12,7 @@
     "test": "gulp test"
   },
   "dependencies": {
+    "@microsoft/microsoft-graph-types": "^1.36.0",
     "@microsoft/sp-core-library": "1.11.0",
     "@microsoft/sp-lodash-subset": "1.11.0",
     "@microsoft/sp-office-ui-fabric-core": "1.11.0",

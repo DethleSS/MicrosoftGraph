@@ -1,6 +1,6 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 
-.graphConsumer {
+.graphWebPart {
   .container {
     max-width: 700px;
     margin: 0px auto;
@@ -27,15 +27,6 @@
     @include ms-fontColor-white;
   }
 
-  .form {
-    @include ms-font-l;
-    @include ms-fontColor-white;
-  }
-  
-  label {
-    @include ms-fontColor-white;
-  }
-  
   .subTitle {
     @include ms-font-l;
     @include ms-fontColor-white;

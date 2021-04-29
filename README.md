@@ -1,4 +1,4 @@
-# spfx-api-scopes
+# graph-apis
 
 ## Summary
 

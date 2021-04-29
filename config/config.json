@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "graph-consumer-web-part": {
+    "graph-web-part-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/graphConsumer/GraphConsumerWebPart.js",
-          "manifest": "./src/webparts/graphConsumer/GraphConsumerWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/graphWebPart/GraphWebPartWebPart.js",
+          "manifest": "./src/webparts/graphWebPart/GraphWebPartWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "GraphConsumerWebPartStrings": "lib/webparts/graphConsumer/loc/{locale}.js"
+    "GraphWebPartWebPartStrings": "lib/webparts/graphWebPart/loc/{locale}.js"
   }
 }
