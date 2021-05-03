@@ -1,0 +1,50 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.9",
+    "version": "1.0.0",
+    "id": "3243b935-5dce-4dc0-b327-9d837d59ce0e",
+    "packageName": "graph.api.perso.nal",
+    "developer": {
+        "name": "Graph Api ",
+        "websiteUrl": "https://chekurin.sharepoint.com/sites/TeamSite",
+        "privacyUrl": "https://chekurin.sharepoint.com/sites/TeamSite",
+        "termsOfUseUrl": "https://chekurin.sharepoint.com/sites/TeamSite"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Graph Api App",
+        "full": "Graph Api App"
+    },
+    "description": {
+        "short": "Graph Api App",
+        "full": "Graph Api App - Full description"
+    },
+    "accentColor": "#8B8B8B",
+    "staticTabs": [
+        {
+            "entityId": "100001",
+            "name": "Graph Api",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=402d4122-8b88-4164-928f-2089a205ce0a%26forceLocale={locale}",
+            "websiteUrl": "https://chekurin.sharepoint.com/sites/TeamSite",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "about",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "chekurin.sharepoint.com"
+    ]
+}

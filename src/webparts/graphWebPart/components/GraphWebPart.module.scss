@@ -1,9 +1,9 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 
 .graphWebPart {
-    width: 1500px;
+  font-style: italic;
   .container {
-    max-width: none;
+    max-width: max-content;
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   }
@@ -13,16 +13,24 @@
     flex-flow: row nowrap;
     @include ms-Grid-row;
     @include ms-fontColor-white;
-    background-color: $ms-color-themeDark;
+    background-color: rgb(71, 71, 219);
     padding: 20px;
   }
 
   .column {
-    @include ms-Grid-col;
-    @include ms-lg10;
-    @include ms-xl8;
-    @include ms-xlPush2;
-    @include ms-lgPush1;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    color: rgb(107, 107, 107);
+    font-weight: 500;
+    background-color: white;
+    margin: 5px 5px 5px 5px;
+  }
+
+  .logo__User{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
   }
 
   .title {
